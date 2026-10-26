@@ -1,98 +1,348 @@
-/* Import Vazirmatn font for Persian typography */
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap');
-
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* این بخش را در بالای فایل css پیدا کنید و به آن scroll-behavior اضافه کنید */
+html {
+    scroll-behavior: smooth;
 }
+
+:root {
+    --bg-dark: #050914; 
+    --bg-surface: rgba(16, 28, 58, 0.5);
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --primary-cyan: #00f2fe;
+    --primary-teal: #4facfe;
+    --accent-amber: #ff9a44;
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: 'Vazirmatn', Tahoma, sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
-    line-height: 1.6;
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.8;
+    overflow-x: hidden;
 }
 
-/* Navigation Bar */
-header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    padding: 20px 5%;
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* Glassmorphism */
+.glass {
+    background: var(--bg-surface);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+h1, h2, h3, h4 { color: #fff; margin-bottom: 16px; font-weight: 700; line-height: 1.5; }
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; }
+p { color: var(--text-muted); margin-bottom: 24px; font-size: 1.05rem; }
+
+.text-gradient {
+    background: linear-gradient(90deg, var(--primary-cyan), var(--primary-teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.btn-primary {
+    background: linear-gradient(45deg, var(--accent-amber), #ff512f);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(255, 154, 68, 0.4);
+}
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 154, 68, 0.6);
+}
+.btn-outline {
+    background: transparent;
+    color: var(--primary-cyan);
+    border: 1px solid var(--primary-cyan);
+}
+.btn-outline:hover { background: rgba(0, 242, 254, 0.1); }
+
+/* Navbar */
+.navbar {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(5, 9, 20, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+}
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.8rem; font-weight: 800; color: #fff; }
+.logo span { color: var(--primary-cyan); }
+
+/* Section Spacing */
+section { padding: 100px 0; }
+.section-header { text-align: center; margin-bottom: 50px; }
+
+/* 1. Hero Full Width (image10.jpeg) */
+.hero-full {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url('images/image10.jpeg') center/cover no-repeat;
+}
+/* ایجاد سایه تیره در سمت راست برای خوانایی متن روی تصویر روشن */
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to left, rgba(5, 9, 20, 0.95) 0%, rgba(5, 9, 20, 0.7) 40%, rgba(5, 9, 20, 0.1) 100%);
+}
+.hero-content-wrapper { position: relative; z-index: 10; width: 100%; }
+.hero-content { max-width: 600px; }
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(79, 172, 254, 0.15);
+    color: var(--primary-cyan);
+    border: 1px solid var(--primary-cyan);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+}
+
+/* 2. Intro Section */
+.intro { display: flex; align-items: center; gap: 60px; }
+.intro-image { flex: 1; }
+.intro-image img { width: 100%; border-radius: 20px; }
+.intro-content { flex: 1; }
+
+/* 3. Tech Specs Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.feature-card { padding: 40px 30px; transition: transform 0.3s; }
+.feature-card:hover { transform: translateY(-10px); border-color: var(--primary-teal); }
+.icon-box { font-size: 3rem; margin-bottom: 20px; }
+
+/* 4. Dashboard Section */
+.dashboard { display: flex; align-items: center; gap: 50px; }
+.dashboard-content { flex: 1; }
+.dashboard-image { flex: 1; text-align: center; }
+.dashboard-image img { width: 100%; max-width: 500px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,242,254,0.1); }
+.check-list { list-style: none; margin-top: 20px; }
+.check-list li {
+    position: relative;
+    padding-right: 30px;
+    margin-bottom: 15px;
+    color: var(--text-muted);
+}
+.check-list li::before {
+    content: '✓';
+    position: absolute;
+    right: 0;
+    color: var(--primary-teal);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.check-list li strong { color: #fff; }
+
+/* 5. Metrics Banner */
+.metrics-banner {
+    background: linear-gradient(90deg, rgba(16,28,58,0.8), rgba(0,242,254,0.1));
+    padding: 60px 0;
+    margin: 50px 0;
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+}
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 30px;
+}
+.metric-number {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--primary-cyan);
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(0,242,254,0.4);
+}
+
+/* 6. FAQ Accordion */
+.faq-container { max-width: 800px; margin: 0 auto; }
+.faq-item {
+    margin-bottom: 15px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.faq-item summary {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    outline: none;
+    list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-.logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: #0056b3;
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; color: var(--primary-cyan); font-size: 1.5rem; transition: 0.3s; }
+.faq-item[open] summary::after { content: '-'; }
+.faq-content {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--glass-border);
+    color: var(--text-muted);
+    line-height: 1.8;
 }
 
-/* Hero Section */
-.hero {
+/* 7. CTA Full Width (image12.png) */
+.cta-full {
+    position: relative;
+    padding: 120px 0;
+    background: url('images/image12.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.cta-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(5,9,20,0.85), rgba(5,9,20,0.95)); /* Dark/Warm overlay */
+}
+.cta-content-wrapper { position: relative; z-index: 10; text-align: center; }
+.cta-box {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+}
+.cta-box h2 { font-size: 2.5rem; }
+
+/* 8. Footer */
+.footer {
+    background: #03050a;
+    padding: 80px 0 20px;
+    border-top: 1px solid var(--glass-border);
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+.footer-links ul { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-links a:hover { color: var(--primary-cyan); }
+.trust-badges { display: flex; gap: 15px; margin-top: 15px; }
+.badge-placeholder {
+    width: 100px; height: 100px;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; font-size: 0.8rem; color: var(--text-muted);
+}
+.footer-bottom {
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
-    color: white;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    color: var(--text-muted);
+    font-size: 0.9rem;
 }
 
-.hero h1 {
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+@keyframes float-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+.floating { animation: float 6s ease-in-out infinite; }
+.floating-slow { animation: float-slow 8s ease-in-out infinite; }
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.active { opacity: 1; transform: translateY(0); }
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+
+/* Responsive */
+@media (max-width: 992px) {
+    .intro, .dashboard { flex-direction: column; text-align: center; }
+    .hero-overlay { background: rgba(5, 9, 20, 0.85); /* Darken everything on mobile */ }
+    .hero-content { text-align: center; margin: 0 auto; }
+    .metrics-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    .trust-badges { justify-content: center; }
+    h1 { font-size: 2.2rem; }
+    .metric-number { font-size: 3rem; }
+}
+
+/* تنظیمات تصویر نماد اعتماد */
+.trust-icon {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain; /* برای حفظ تناسب ابعاد تصویر */
+    /* اگر تصویر شما پس‌زمینه سفید ندارد و در تم تاریک ناخوانا است، می‌توانید کد زیر را از حالت کامنت خارج کنید: */
+    /* filter: drop-shadow(0px 0px 5px rgba(255,255,255,0.5)); */
+}
+
+/* Contact Details Section */
+.contact-section {
+    padding: 80px 0;
+    text-align: center;
+}
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.contact-card {
+    padding: 40px 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.contact-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-cyan);
+}
+.contact-icon {
     font-size: 3rem;
     margin-bottom: 20px;
+    display: inline-block;
 }
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    opacity: 0.9;
-}
-
-.cta-button {
-    background-color: #ff9800;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #e68a00;
-}
-
-/* Features Section */
-.features {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 80px 5%;
-    flex-wrap: wrap;
-}
-
-.feature-card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    width: 300px;
-    text-align: center;
-}
-
-.feature-card h3 {
-    color: #0056b3;
+.contact-card h3 {
+    color: var(--primary-cyan);
     margin-bottom: 15px;
+    font-size: 1.3rem;
 }
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 30px;
-    background-color: #222;
-    color: #aaa;
-    margin-top: 40px;
+.contact-card p, .contact-card a {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    text-decoration: none;
+    direction: ltr; /* برای نمایش درست شماره‌ها و ایمیل */
+    display: inline-block;
+}
+.contact-card a:hover {
+    color: var(--accent-amber);
 }
