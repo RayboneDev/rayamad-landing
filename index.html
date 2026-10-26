@@ -4,45 +4,252 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>رای‌آمد | پلتفرم نوین سازمانی</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.0/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
     <!-- Header / Navigation -->
-    <header>
-        <div class="logo">رای‌آمد</div>
-        <nav>
-            <!-- You can add menu links here later -->
-        </nav>
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">رای‌<span>آمد</span></div>
+            <nav>
+                <a href="#contact-section" class="btn btn-outline">تماس با ما</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Section (Main Hook) -->
-    <section class="hero">
-        <h1>آینده مدیریت سازمانی با رای‌آمد</h1>
-        <p>یکپارچگی، امنیت و سرعت در یک پلتفرم هوشمند برای توسعه کسب‌وکار شما.</p>
-        <a href="#" class="cta-button">شروع کنید</a>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="feature-card">
-            <h3>امنیت بالا</h3>
-            <p>داده‌های شما با پیشرفته‌ترین استانداردهای رمزنگاری محافظت می‌شوند.</p>
-        </div>
-        <div class="feature-card">
-            <h3>یکپارچگی آسان</h3>
-            <p>اتصال سریع به زیرساخت‌های فعلی سازمان شما بدون قطعی و افت سرعت.</p>
-        </div>
-        <div class="feature-card">
-            <h3>پشتیبانی ۲۴/۷</h3>
-            <p>تیم متخصص ما در هر لحظه آماده پاسخگویی و رفع مشکلات زیرساختی شماست.</p>
+    <!-- Hero Section (Full Width with image10.jpeg) -->
+    <section class="hero-full">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content-wrapper">
+            <div class="hero-content reveal">
+                <div class="badge">سامانه OTA اختصاصی رایبُن</div>
+                <h1>به‌روزرسانی هوشمند، <br><span class="text-gradient">بدون مرز و کابل</span></h1>
+                <p>رای‌آمد، سامانهٔ به‌روزرسانی هوایی (OTA) اختصاصی شرکت رایبُن، برای گوشی‌های ایرانی است. ما همان تجربهٔ امن و یکپارچه‌ای را که کاربران جهانی از سیستم‌های پیشرفتهٔ به‌روزرسانی انتظار دارند، به اکوسیستم موبایل ایران آورده‌ایم. با رای‌آمد، جدیدترین وصله‌های امنیتی و بهبودهای نرم‌افزاری، مستقیماً روی دستگاه شما فرود می‌آیند.</p>
+                <div class="hero-actions">
+                    <a href="#contact-section" class="btn btn-primary">شروع همکاری</a>
+                </div>
+            </div>
         </div>
     </section>
+    <br>
+    <br>
+    <!-- Intro Section -->
+    <section class="intro container">
+        <div class="intro-image floating-slow">
+            <img src="assets/images/image2.png" alt="زیرساخت بومی رای‌آمد">
+        </div>
+        <div class="intro-content reveal">
+            <h2>رای‌آمد؛ زیرساخت به‌روزرسانی <span class="text-gradient">بومی</span></h2>
+            <p>در دنیای امروز، امنیت و کارایی دستگاه‌های همراه به‌روزرسانی‌های مداوم وابسته است. رای‌آمد یک راهکار جامع OTA است که توسط رایبُن توسعه یافته تا چرخهٔ به‌روزرسانی سیستم‌عامل گوشی‌های تولید داخل را به‌صورت کاملاً خودکار و بدون نیاز به اتصال فیزیکی مدیریت کند.</p>
+            <p>این سامانه، پلی است میان تولیدکنندگان گوشی و کاربران نهایی تا تجربه‌ای پایدار، امن و به‌روز را تضمین کند.</p>
+        </div>
+    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 شرکت رای‌بون (Raybone). تمامی حقوق محفوظ است.</p>
+    <!-- Advanced Tech Specs -->
+    <section class="tech-specs">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>معماری پیشرفته؛ <span class="text-gradient">تضمین پایداری و سرعت</span></h2>
+                <p>تکنولوژی‌هایی که رای‌آمد را به یک زیرساخت قابل اعتماد تبدیل می‌کنند</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card glass reveal">
+                    <div class="icon-box">📉</div>
+                    <h3>به‌روزرسانی تفاضلی (Delta)</h3>
+                    <p>نیازی به دانلود کل رام نیست! رای‌آمد تنها تغییرات نسخهٔ جدید را دانلود می‌کند. کاهش شدید مصرف اینترنت و افزایش چشمگیر سرعت.</p>
+                </div>
+                <div class="feature-card glass reveal delay-1">
+                    <div class="icon-box">⚡</div>
+                    <h3>پشتیبانی از Seamless Updates</h3>
+                    <p>پارتیشن‌بندی A/B. کاربر بدون وقفه به کار ادامه می‌دهد و نصب در پس‌زمینه انجام می‌شود؛ تنها با یک ری‌استارت نسخهٔ جدید در دسترس است.</p>
+                </div>
+                <div class="feature-card glass reveal delay-2">
+                    <div class="icon-box">🛡️</div>
+                    <h3>بازگشت‌پذیری هوشمند</h3>
+                    <p>امنیت خط قرمز ماست. در صورت قطعی اینترنت یا افت باتری حین نصب، سیستم بدون کوچکترین آسیب (Bricking) به حالت پایدار قبلی بازمی‌گردد.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard container">
+        <div class="dashboard-content reveal">
+            <h2>کنترل پنل سازمانی؛ <br><span class="text-gradient">فرماندهی در دستان شما</span></h2>
+            <p>پلتفرم رای‌آمد صرفاً یک کلاینت روی گوشی نیست، بلکه یک داشبورد ابری قدرتمند برای مدیران و تولیدکنندگان است:</p>
+            <ul class="check-list">
+                <li><strong>انتشار مرحله‌ای (Staged Rollouts):</strong> به‌روزرسانی را ابتدا برای ۵٪ کاربران منتشر کنید، بازخورد بگیرید و سپس ۱۰۰٪ فعال کنید.</li>
+                <li><strong>هدف‌گذاری دقیق (Targeting):</strong> ارسال بر اساس مدل دقیق دستگاه، منطقهٔ جغرافیایی یا سریال‌های خاص (IMEI).</li>
+                <li><strong>گزارش‌گیری لحظه‌ای (Real-time Analytics):</strong> پایش زنده وضعیت دانلودها، نرخ موفقیت نصب، و خطاهای احتمالی.</li>
+            </ul>
+        </div>
+        <div class="dashboard-image floating reveal delay-1">
+            <img src="assets/images/image13.jpeg" alt="داشبورد متمرکز سازمانی">
+        </div>
+    </section>
+
+    <!-- Trust & Metrics Banner -->
+    <section class="metrics-banner glass-panel reveal">
+        <div class="container metrics-grid">
+            <div class="metric-item">
+                <div class="metric-number"><span class="counter" data-target="99.99">0</span>٪</div>
+                <p>پایداری سرورها در توزیع فایل‌ها</p>
+            </div>
+            <div class="metric-item">
+                <div class="metric-number"> <span class="counter" data-target="70">0</span>٪</div>
+                <p>کاهش حجم مصرفی با تکنولوژی Delta</p>
+            </div>
+            <div class="metric-item">
+                <div class="metric-number"><span class="counter" data-target="24">0</span>/7</div>
+                <p>پشتیبانی برای توسعه‌دهندگان زیرساخت</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section container">
+        <div class="section-header reveal">
+            <h2>سوالات متداول</h2>
+        </div>
+        <div class="faq-container reveal">
+            <details class="faq-item glass">
+                <summary>آیا رای‌آمد به تغییرات عمیق در کرنل یا رام نیاز دارد؟</summary>
+                <div class="faq-content">خیر، رای‌آمد به‌گونه‌ای طراحی شده که با کمترین میزان شخصی‌سازی روی رام‌های سفارشی بر پایهٔ AOSP یکپارچه (Integrate) شود. مستندات کامل توسعه‌دهندگان توسط تیم رایبُن ارائه می‌شود.</div>
+            </details>
+            <details class="faq-item glass">
+                <summary>امنیت فایل‌های به‌روزرسانی چگونه تامین می‌شود؟</summary>
+                <div class="faq-content">تمامی بسته‌های به‌روزرسانی با کلیدهای اختصاصی رمزنگاری و امضا می‌شوند. کلاینت رای‌آمد پیش از آغاز نصب، یکپارچگی فایل و امضای دیجیتال آن را تایید می‌کند تا از حملات دستکاری فایل (MitM) جلوگیری شود.</div>
+            </details>
+            <details class="faq-item glass">
+                <summary>تفاوت رای‌آمد با سرورهای دانلود معمولی چیست؟</summary>
+                <div class="faq-content">سرورهای معمولی صرفاً فایل را میزبانی می‌کنند، اما رای‌آمد یک چرخهٔ کامل (شامل صف‌بندی کلاینت‌ها، مدیریت ترافیک سرور، توزیع مرحله‌ای، آپدیت‌های دلتا و مکانیزم‌های Fallback) را مدیریت می‌کند که مختص معماری موبایل است.</div>
+            </details>
+            <details class="faq-item glass">
+                <summary>آیا این سامانه فقط برای گوشی‌های هوشمند است؟</summary>
+                <div class="faq-content">تمرکز اصلی روی اسمارت‌فون‌های ایرانی است، اما معماری رای‌آمد قابلیت پیاده‌سازی روی تبلت‌ها، صندوق‌های فروشگاهی هوشمند (POS) و سایر دستگاه‌های اندرویدی سازمانی را نیز دارد.</div>
+            </details>
+        </div>
+    </section>
+
+    <!-- CTA Section (Full Width with image12.png) -->
+    <section id="contact" class="cta-full">
+        <div class="cta-overlay"></div>
+        <div class="container cta-content-wrapper reveal">
+            <div class="cta-box glass">
+                <h2>آیندهٔ به‌روزرسانی گوشی‌های ایرانی اینجاست.</h2>
+                <p>برای همکاری با رایبُن و بهره‌مندی از زیرساخت رای‌آمد، همین امروز با ما تماس بگیرید. بیایید با هم تجربه‌ای امن، به‌روز و بومی بسازیم.</p>
+                <a href="#contact-section" class="btn btn-primary btn-large">مشاوره و دمو</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Details Section -->
+    <section id="contact-section" class="contact-section container">
+        <div class="section-header reveal">
+            <h2>ارتباط با <span class="text-gradient">رایبُن</span></h2>
+            <p>برای دریافت مشاوره تخصصی و استعلام خدمات، از طریق راه‌های زیر با ما در ارتباط باشید.</p>
+        </div>
+        <div class="contact-cards">
+            <!-- Email -->
+            <div class="contact-card glass reveal">
+                <div class="contact-icon">✉️</div>
+                <h3>پست الکترونیک</h3>
+                <a href="mailto:sales@raybone.ir">sales@raybone.ir</a>
+            </div>
+            <!-- Phone -->
+            <div class="contact-card glass reveal delay-1">
+                <div class="contact-icon">📞</div>
+                <h3>شماره تماس</h3>
+                <a href="tel:+982100000000">۰۲۱-۱۲۳۴۵۶۷۸</a>
+            </div>
+            <!-- Address -->
+            <div class="contact-card glass reveal delay-2">
+                <div class="contact-icon">📍</div>
+                <h3>آدرس دفتر مرکزی</h3>
+                <p dir="rtl">تهران، خیابان قاسمی، باکس شریف</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Enhanced Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <div class="logo">رای‌<span>آمد</span></div>
+                <p>رایبُن؛ پیشگام در توسعهٔ زیرساخت‌های بومی موبایل و ایجاد تجربه‌ای امن برای کاربران ایرانی.</p>
+            </div>
+            <div class="footer-links">
+                <h4>لینک‌های سریع</h4>
+                <ul>
+                    <li><a href="javascript:void(0);">مستندات یکپارچه‌سازی (API)</a></li>
+                    <li><a href="javascript:void(0);">ورود به پنل مدیریت</a></li>
+                    <li><a href="javascript:void(0);">درباره شرکت رایبُن</a></li>
+                    <li><a href="javascript:void(0);">تماس با پشتیبانی فنی</a></li>
+                </ul>
+            </div>
+            <div class="footer-trust">
+                <h4>نمادهای اعتماد</h4>
+                <div class="trust-badges">
+                    <div class="badge-placeholder glass">
+                        <!-- استفاده از تگ img برای نمایش لوگو -->
+                        <img src="assets/images/danesh-bonyan.png" alt="نماد شرکت دانش‌بنیان" class="trust-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 شرکت رایبُن (Raybone). تمامی حقوق محفوظ است.</p>
+        </div>
     </footer>
 
+
+    <!-- انیمیشن‌ها و اسکریپت شمارنده -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll Reveal
+            const reveals = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            reveals.forEach(reveal => revealObserver.observe(reveal));
+
+            // Animated Counters
+            const counters = document.querySelectorAll('.counter');
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = +counter.getAttribute('data-target');
+                        const duration = 2000; // 2 seconds
+                        const increment = target / (duration / 16); 
+                        
+                        let current = 0;
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                // Keep decimals if target has decimals
+                                counter.innerText = target % 1 !== 0 ? current.toFixed(2) : Math.ceil(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.innerText = target;
+                            }
+                        };
+                        updateCounter();
+                        observer.unobserve(counter);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(counter => counterObserver.observe(counter));
+        });
+    </script>
 </body>
 </html>
